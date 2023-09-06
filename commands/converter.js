@@ -3,9 +3,9 @@
  Licensed under the  GPL-3.0 License;
  You may not use this file except in compliance with the License.
  It is supplied in the hope that it may be useful.
- * @project_name : Secktor-Md
- * @author : SamPandey001 <https://github.com/SamPandey001>
- * @description : Secktor,A Multi-functional whatsapp bot.
+ * @project_name : Raphael-Md
+ * @author : Outlaw <https://github.com/Blackbrood/Raphael-MD>
+ * @description : Raphael,A Multi-functional whatsapp bot.
  * @version 0.0.6
  **/
 
@@ -152,7 +152,7 @@ cmd({
             };
             let res = await axios.post("https://bot.lyo.su/quote/generate", body);
             let img = Buffer.alloc(res.data.result.image.length, res.data.result.image, "base64");
-            return citel.reply(img,{packname:'Secktor',author:'Quotely'},"sticker")
+            return citel.reply(img,{packname:'Raphael',author:'Quotely'},"sticker")
 
         }
     )
@@ -161,16 +161,16 @@ cmd({
             pattern: "fancy",
             desc: "Makes stylish/fancy given text",
             category: "converter",
-            use: '56 Secktor',
+            use: '56 Raphael',
             react: "✅",
             filename: __filename
         },
         async(Void, citel, text) => {
             if (isNaN(text.split(" ")[0]) || !text) {
                 let text = tiny(
-                    "Fancy text generator\n\nExample: .fancy 32 Secktor\n\n"
+                    "Fancy text generator\n\nExample: .fancy 32 Raphael\n\n"
                 );
-                listall("Secktor Bot").forEach((txt, num) => {
+                listall("Raphael Bot").forEach((txt, num) => {
                     text += `${(num += 1)} ${txt}\n`;
                 });
                 return await citel.reply(text);
