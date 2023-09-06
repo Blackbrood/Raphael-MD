@@ -3,9 +3,9 @@
  Licensed under the  GPL-3.0 License;
  You may not use this file except in compliance with the License.
  It is supplied in the hope that it may be useful.
- * @project_name : Secktor-Md
- * @author : SamPandey001 <https://github.com/SamPandey001>
- * @description : Secktor,A Multi-functional whatsapp bot.
+ * @project_name : Raphael-Md
+ * @author : Outlaw <https://github.com/Blackbrood/Raphael-MD>
+ * @description : Raphael,A Multi-functional whatsapp bot.
  * @version 0.0.6
  **/
 
@@ -16,10 +16,10 @@ const Config = require('../config')
 let { fancytext, tlang, tiny, runtime, formatp, botpic, prefix, sck1 } = require("../lib");
 const long = String.fromCharCode(8206)
 const readmore = long.repeat(4001)
-const Secktor = require('../lib/commands')
+const Raphael = require('../lib/commands')
 
     //---------------------------------------------------------------------------
-Secktor.cmd({
+Raphael.cmd({
             pattern: "help",
             alias: ["menu"],
             desc: "Help list",
@@ -92,7 +92,7 @@ Secktor.cmd({
         }
     )
     //---------------------------------------------------------------------------
-Secktor.cmd({
+Raphael.cmd({
             pattern: "list",
             desc: "list menu",
             category: "general"
@@ -102,16 +102,16 @@ Secktor.cmd({
             let str = `
 ╭━━〘 ` + fancytext(Config.ownername.split(' ')[0], 58) + ` 〙━━──⊷`
             str += `
-┃ ⛥╭──────────────      
-┃ ⛥│ User: ${citel.pushName}
-┃ ⛥│ Theme: ${tlang().title}
-┃ ⛥│ Prefix: ${prefix}
-┃ ⛥│ Owner: ${Config.ownername}
-┃ ⛥│ Commands: ${commands.length}
-┃ ⛥│ Uptime: ${runtime(process.uptime())}
-┃ ⛥│ Mem: ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
-┃ ⛥│  
-┃ ⛥╰───────────
+┃ +╭──────────────      
+┃ +│ User: ${citel.pushName}
+┃ +│ Theme: ${tlang().title}
+┃ +│ Prefix: ${prefix}
+┃ +│ Owner: ${Config.ownername}
+┃ +│ Commands: ${commands.length}
+┃ +│ Uptime: ${runtime(process.uptime())}
+┃ +│ Mem: ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
+┃ +│  
+┃ +╰───────────
 ╰━━━━━━━━━━━──⊷\n`
 for (let i = 0; i < commands.length; i++) 
 {
@@ -124,7 +124,7 @@ for (let i = 0; i < commands.length; i++)
         }
     )
     //---------------------------------------------------------------------------
-Secktor.cmd({
+Raphael.cmd({
         pattern: "owner",
         desc: "To find owner number",
         category: "general",
@@ -161,7 +161,7 @@ Secktor.cmd({
     }
 )
 
-Secktor.cmd({
+Raphael.cmd({
     pattern: "file",
     desc: "to get extact name where that command is in repo.\nSo user can edit that.",
     category: "general",
